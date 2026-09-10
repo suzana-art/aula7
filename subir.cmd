@@ -1,46 +1,54 @@
 @echo off
 chcp 65001 >nul
-title Upload GitHub - Aula 7
+title Upload GitHub - NEXA
 
 echo.
 echo ==========================================
-echo              AULA 7 - GITHUB
+echo              NEXA - AULA 7
 echo ==========================================
 echo.
 
 :: ==============================
-:: INFORMAÇÕES DO SISTEMA
+:: INFORMACOES
 :: ==============================
-set "SISTEMA=Aula 7"
+set "SISTEMA=NEXA"
+set "PROJETO=Aula 7"
 set "REPOSITORIO=aula7"
 
 :: ==============================
-:: CRIA README
+:: CRIAR README
 :: ==============================
 (
-echo # 🚀 %SISTEMA%
+echo # 🚀 NEXA - %PROJETO%
 echo.
-echo ┌──────────────────────────────────────┐
-echo │              %SISTEMA%               │
-echo │          Projeto em desenvolvimento   │
-echo └──────────────────────────────────────┘
-echo.
-echo **Informações do projeto**
-echo.
-echo - 📁 Diretório: `%CD%`
-echo - 📅 Data: %DATE%
-echo - 🕐 Hora: %TIME%
-echo - 💻 Sistema: Windows
-echo - 📦 Repositório: %REPOSITORIO%
-echo.
-echo ---
+echo ## 💻 Sistema NEXA
 echo.
 echo Projeto desenvolvido para fins acadêmicos.
 echo.
-echo **Última atualização:** %DATE% %TIME%
+echo ### 📌 Informações do projeto
+echo.
+echo ^| Informação ^| Detalhe ^|
+echo ^|---^|---^|
+echo ^| 📁 Diretório ^| `%CD%` ^|
+echo ^| 📅 Data ^| %DATE% ^|
+echo ^| 🕐 Hora ^| %TIME% ^|
+echo ^| 💻 Sistema ^| Windows ^|
+echo ^| 📦 Repositório ^| %REPOSITORIO% ^|
+echo.
+echo ---
+echo.
+echo ## 🌐 NEXA
+echo.
+echo **Tecnologia da Informação e suporte técnico.**
+echo.
+echo A NEXA conecta empresas que precisam de suporte técnico a profissionais qualificados de TI.
+echo.
+echo ---
+echo.
+echo 📅 **Última atualização:** %DATE% às %TIME%
 ) > README.md
 
-echo README.md criado!
+echo README.md criado com sucesso!
 echo.
 
 :: ==============================
@@ -54,24 +62,24 @@ git add . -v
 
 echo.
 echo Criando commit...
-git commit -m "Atualização do projeto - %DATE% %TIME%"
+git commit -m "NEXA - %PROJETO% - %DATE% %TIME%"
 
 echo.
 echo Configurando branch...
 git branch -M main
 
 echo.
-echo Configurando repositorio remoto...
+echo Configurando GitHub...
 git remote remove origin 2>nul
 git remote add origin git@github.com:suzana-art/aula7.git
 
 echo.
-echo Enviando para GitHub...
+echo Enviando projeto para o GitHub...
 git push -u origin main
 
 echo.
 echo ==========================================
-echo          UPLOAD CONCLUIDO!
+echo          🚀 NEXA ENVIADA!
 echo ==========================================
 echo.
 pause
